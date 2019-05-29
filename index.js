@@ -15,7 +15,7 @@ class HotCountry extends React.Component{
                     <div className='h-c-title'>热门</div>
                     {
                         this.props.hotCountrys.map(item=>{
-                            return (<div className='h-c-item' key={`hot_${item.code}`}>{item.nameZh}</div>)
+                            return (<div className='h-c-item' key={`hot_${item.code}`} onClick={()=>this.props.selectCountry(item)}>{item.nameZh}</div>)
                         })
                     }
                 </div>);
@@ -46,7 +46,7 @@ class NomalCountryList extends React.Component{
                                 }).map((item,index)=>{
                                     return (<div key={`country_${item.code}`}>
                                                 <div className='letter' style={index==0?{}:{display:'none'}} id={`letter_${l}`}>{l}</div>
-                                                <div className='country d-f-c-v'>{item.nameZh}({item.code})</div>
+                                                <div className='country d-f-c-v' onClick={()=>this.props.selectCountry(item)}>{item.nameZh}({item.code})</div>
                                             </div>)
                                 })
                         })
@@ -97,13 +97,16 @@ export default class CountryList extends React.Component{
         if(!el)return 
         document.getElementsByClassName(`country-list-content`)[0].scrollTop = el.offsetTop - document.getElementsByClassName(`am-search`)[0].clientHeight ;
     }
+    selectCountry(country){
+        console.log(country) ;
+    }
     render(){
         return (<div className='view-content country-list-page'>
                     <NavBar mode='light'>选择国家/地区</NavBar>
                     <SearchBar placeholder="国家/地区" maxLength={20} onChange={this.changeVal.bind(this)}/>
                     <div className='country-list-content'>
-                        <HotCountry hotCountrys={this.state.hotCountrys}/>
-                        <NomalCountryList letters={this.state.letters} searchVal={this.state.searchVal} countrys={this.state.countrys}/>
+                        <HotCountry hotCountrys={this.state.hotCountrys} selectCountry={this.selectCountry}/>
+                        <NomalCountryList letters={this.state.letters} searchVal={this.state.searchVal} selectCountry={this.selectCountry} countrys={this.state.countrys}/>
                     </div>
                     <RightLetter selectLetter={this.selectLetter} letters={this.state.letters}/>
             </div>)
