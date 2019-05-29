@@ -1,6 +1,4 @@
 @charset 'utf-8';
-@import "./common.scss";
-@import "./system.scss";
 html {
     font-size: 75px;
 }
@@ -18,3 +16,35 @@ main {
     height: 100%;
     box-sizing: border-box;
 }
+
+
+$base-font-size: 75px; //design iphone6: 375px * 2 / 10 = 75px; --design
+//px转rem
+@function rem($px) {
+    // @return  $px / $base-font-size * 1rem ;
+    @return $px / $base-font-size /2 * 1rem;
+}
+
+
+.d-f-c{
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+}
+//flex垂直居中
+.d-f-c-v{
+    display: flex ;
+    align-items: center ;
+}
+
+.view-content{
+    height: 100% ;
+    width: 100% ;
+    display: flex ; 
+    flex-direction: column; 
+    position: relative ;
+    color: #323232 ;
+   font-family: 'HiraginoSansGB-W3';
+}
+
+@import "./country.scss";
