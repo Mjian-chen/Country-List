@@ -36,7 +36,10 @@ $base-font-size: 75px; //design iphone6: 375px * 2 / 10 = 75px; --design
     display: flex ;
     align-items: center ;
 }
-
+.d-f-column{
+    display: flex ;
+    flex-direction: column ;
+}
 .view-content{
     height: 100% ;
     width: 100% ;
