@@ -1,0 +1,65 @@
+@charset 'utf-8';
+
+//国家选择列表页面--start
+.hot-country-list{
+    background-color: #efeff4; 
+    padding: rem(24px) rem(76px) rem(56px) rem(24px) ;
+    word-break: break-all ;
+    .h-c-title{
+        color: #949494 ;
+        font-size: rem(24px) ;
+    }
+    .h-c-item{
+        margin-top: rem(18px) ;
+        display: inline-block ;
+        background: #fff ;
+        width: rem(192px) ;
+        height:rem(72px) ; 
+        line-height: rem(72px);
+        text-align: center ;
+        margin-right: rem(18px) ;
+    }
+}
+.country-list-page{
+    position: relative ;
+    .country-list-content{
+        flex: 1 ;
+        overflow: scroll ;
+        -webkit-overflow-scrolling: touch ;
+        .letter,.country{
+            padding: 0 rem(24px) ;
+            border-top: rem(1px) solid #E2E2E2 ;
+            box-sizing: border-box ;
+        }
+        .letter{
+            height: rem(44px) ;
+            line-height: rem(50px) ;
+        }
+        .country{
+            min-height: rem(88px) ;
+            // line-height: rem(88px) ;
+            background: #fff ;
+        }
+    }
+}
+.country-list-letter{
+    width: rem(75px) ;
+    position: absolute ;
+    right: rem(12px);
+    top:rem(90px) ;
+    max-height: 100% ;
+    overflow: scroll ;
+    >div{
+        height: rem(38px) ; 
+        line-height: rem(38px) ;
+        font-size: rem(20px) ;
+        color:#949494 ;
+        text-align: center ;
+    }
+}
+.am-navbar{
+    position: fixed ;
+    top:0 ;
+    left: 0 ;
+    right: 0 ;
+}
