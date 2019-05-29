@@ -8,7 +8,7 @@ git clone https://github.com/Mjian-chen/Country-List.git
 cd Country-List
 ```
 ```
-npm install 或  sodu npm install（Mac）
+npm install 或  sudo npm install（Mac）
 ```
 ```
 npm start
