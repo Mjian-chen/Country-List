@@ -7,8 +7,7 @@ import {SearchBar,NavBar} from 'antd-mobile';
 class HotCountry extends React.Component{
     constructor() {
         super();
-        this.state = {
-        } ;
+        this.state = {} ;
     }
     render(){
         return (<div className='hot-country-list'>
@@ -25,9 +24,7 @@ class HotCountry extends React.Component{
 class NomalCountryList extends React.Component{
     constructor() {
         super();
-        this.state = {
-            countrys:[] ,
-        } ;
+        this.state = {} ;
     }
     //根据用户输入的值来筛选对应的国际
     searchByVal(list,val){
